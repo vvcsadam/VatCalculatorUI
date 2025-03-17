@@ -1,0 +1,25 @@
+<mat-toolbar class="toolbar-background">
+  <span class="austrian-flag"></span>
+  <span>VAT Calculator of Austria</span>
+</mat-toolbar> 
+
+<div class="main-container">
+  <!-- Sidebar -->
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <mat-nav-list>
+        <mat-list-item routerLink="/description">Description</mat-list-item>
+        <mat-list-item routerLink="/calculator">Calculator</mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- Main content area -->
+    <mat-sidenav-content class="content-container">
+      <div class="content-body">
+        <!-- <router-outlet></router-outlet> -->
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<footer class="toolbar-background" style="height: 100px;"></footer>
