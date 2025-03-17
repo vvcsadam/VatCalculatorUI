@@ -1,69 +1,50 @@
-.toolbar-background {
-    background-color: rgb(200, 16, 46) !important;
-} 
-
 .austrian-flag {
     display: inline-block;
-    width: 30px; /* Adjust the size of the flag */
+    width: 30px;
     height: 18px;
     background: linear-gradient(to bottom, red 33.33%, white 33.33%, white 66.66%, red 66.66%);
-    margin-right: 10px; /* Space between flag and title */
+    margin-right: 10px;
 }
 
-.toolbar-background {
-    background-color: #3f51b5; /* Example, adjust as needed */
-    color: white;
-}
-
-/* Main container for sidebar and content */
 .main-container {
     display: flex;
     height: 100vh;
-  }
-  
-  /* Sidebar settings */
-  .sidenav-container {
-    flex: 1;
-    display: flex;
-  }
-  
-  /* Sidebar styles */
-  .sidenav {
-    width: 250px;
-    background-color: #f4f4f4;
-  }
-  
-  /* Content area */
-  .content-container {
-    flex: 1;
-    background-color: #fff;
-  }
-  
-  .content-body {
-    font-size: 16px;
-    background-image: url('../assets/images/austrian-vat-bg-image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
 }
   
-  mat-sidenav-content {
-    display: flex;
-    flex-direction: column;
-  }
+.sidenav-container {
+  flex: 1;
+  display: flex;
+}
   
-  mat-nav-list {
-    padding: 0;
-  }
+.sidenav {
+  width: 250px;
+  background-color: #f4f4f4;
+}
   
-  mat-list-item {
-    padding: 10px 15px;
-    cursor: pointer;
-  }
+mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+}
   
-  mat-list-item:hover {
-    background-color: #ddd;
-  }
+mat-nav-list {
+  padding: 0;
+}
+  
+mat-list-item {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+  
+mat-list-item:hover {
+  background-color: #ddd;
+}
+
+.sidenav-icon {
+  margin-right: 16px; /* Adds spacing between icon and text */
+  vertical-align: middle; /* Aligns the icon vertically with the text */
+}
+
+.mat-list-item {
+  display: flex;
+  align-items: center; /* Ensures the icon and text are centered vertically */
+}

@@ -1,1 +1,36 @@
 
+<div class="form-container">
+    <form [formGroup]="vatCalculationForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Net</mat-label>
+        <input matInput formControlName="net" type="number" placeholder="Enter Net Value">
+        <mat-error *ngIf="hasFormControlError('net','pattern')">Please enter a valid number.</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Gross</mat-label>
+        <input matInput formControlName="gross" type="number" placeholder="Enter Gross Value">
+        <mat-error *ngIf="hasFormControlError('gross','pattern')">Please enter a valid number.</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Vat</mat-label>
+        <input matInput formControlName="vat" type="number" placeholder="Enter Vat Value">
+        <mat-error *ngIf="hasFormControlError('vat','pattern')">Please enter a valid number.</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>VAT Range</mat-label>
+        <mat-select formControlName="vatRange">
+          <mat-option *ngFor="let rangeKey of vatRangeKeys" [value]="rangeKey">
+            {{ getVatRangeOptionLabel(rangeKey) }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="hasFormControlError('vatRange','required')">VAT Range is required.</mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button class="austrian-flag-red-gb color-white" type="submit" [disabled]="vatCalculationForm.invalid">
+        Submit
+      </button>
+    </form>
+  </div>

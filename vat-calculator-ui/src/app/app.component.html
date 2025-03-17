@@ -1,6 +1,6 @@
-<mat-toolbar class="toolbar-background">
+<mat-toolbar class="austrian-flag-red-gb color-white">
   <span class="austrian-flag"></span>
-  <span>VAT Calculator of Austria</span>
+  <span><h2>VAT Calculator of Austria</h2></span>
 </mat-toolbar> 
 
 <div class="main-container">
@@ -8,18 +8,24 @@
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode="side" opened class="sidenav">
       <mat-nav-list>
-        <mat-list-item routerLink="/description">Description</mat-list-item>
-        <mat-list-item routerLink="/calculator">Calculator</mat-list-item>
+        <mat-list-item class="mat-list-item" routerLink="/description">
+          <mat-icon class="sidenav-icon austrian-flag-red-color">info</mat-icon>
+          <span>Description</span>
+        </mat-list-item>
+        <mat-list-item class="mat-list-item" routerLink="/calculator">
+          <mat-icon class="sidenav-icon austrian-flag-red-color">euro</mat-icon>
+          <span>Calculator</span>
+        </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
 
     <!-- Main content area -->
     <mat-sidenav-content class="content-container">
       <div class="content-body">
-        <!-- <router-outlet></router-outlet> -->
+        <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
 
-<footer class="toolbar-background" style="height: 100px;"></footer>
+<footer class="austrian-flag-red-gb" style="height: 10%;"></footer>
