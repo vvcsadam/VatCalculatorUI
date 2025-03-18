@@ -7,9 +7,6 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AppConfig } from './config/app.config';
 
-import { TaskDescriptionComponent } from './task-description/task-description.component';
-import { VatCalculatorComponent } from './vat-calculator/vat-calculator.component';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -20,7 +17,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { GlobalErrorHandler } from './services/global-error.handler';
+
+import { TaskDescriptionComponent } from './task-description/task-description.component';
+import { VatCalculatorComponent } from './vat-calculator/vat-calculator.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +42,10 @@ import { GlobalErrorHandler } from './services/global-error.handler';
     MatButtonModule,
     MatSelectModule,
     MatOptionModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule,
     HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [
     provideClientHydration(),

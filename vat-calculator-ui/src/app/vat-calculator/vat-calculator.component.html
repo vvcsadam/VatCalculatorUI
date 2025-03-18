@@ -14,23 +14,24 @@
       </mat-form-field>
   
       <mat-form-field appearance="fill">
-        <mat-label>Vat</mat-label>
+        <mat-label>VAT</mat-label>
         <input matInput formControlName="vat" type="number" placeholder="Enter Vat Value">
         <mat-error *ngIf="hasFormControlError('vat','pattern')">Please enter a valid number.</mat-error>
       </mat-form-field>
   
       <mat-form-field appearance="fill">
         <mat-label>VAT Range</mat-label>
-        <mat-select formControlName="vatRange">
-          <mat-option *ngFor="let rangeKey of vatRangeKeys" [value]="rangeKey">
-            {{ getVatRangeOptionLabel(rangeKey) }}
+        <mat-select formControlName="vatRate">
+          <mat-option *ngFor="let rangeKey of vatRateKeys" [value]="rangeKey">
+            {{ getVatRateOptionLabel(rangeKey) }}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="hasFormControlError('vatRange','required')">VAT Range is required.</mat-error>
+        <mat-error *ngIf="hasFormControlError('vatRate','required')">VAT Range is required.</mat-error>
       </mat-form-field>
   
       <button mat-raised-button class="austrian-flag-red-gb color-white" type="submit" [disabled]="vatCalculationForm.invalid">
-        Submit
+        <mat-progress-spinner *ngIf="isSubmitting" diameter="20" mode="indeterminate"></mat-progress-spinner>
+        {{ !isSubmitting ? 'Calculate' : ''}}
       </button>
     </form>
   </div>

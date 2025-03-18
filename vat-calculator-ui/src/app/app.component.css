@@ -40,11 +40,26 @@ mat-list-item:hover {
 }
 
 .sidenav-icon {
-  margin-right: 16px; /* Adds spacing between icon and text */
-  vertical-align: middle; /* Aligns the icon vertically with the text */
+  margin-right: 16px;
+  vertical-align: middle;
 }
 
 .mat-list-item {
   display: flex;
-  align-items: center; /* Ensures the icon and text are centered vertically */
+  align-items: center;
+}
+
+.error-snackbar {
+  background-color: rgb(200, 16, 46) !important;
+  color: white !important;
+  width: 100%;
+  margin-top: 64px !important;
+}
+
+
+.title-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }

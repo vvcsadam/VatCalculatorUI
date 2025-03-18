@@ -6,7 +6,8 @@ import { VatCalculatorComponent } from './vat-calculator/vat-calculator.componen
 const routes: Routes = [
   { path: 'description', component: TaskDescriptionComponent },
   { path: 'calculator', component: VatCalculatorComponent },
-  { path: '', redirectTo: '', pathMatch: 'full' }
+  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
