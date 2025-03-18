@@ -1,0 +1,47 @@
+.homework-container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.homework-title {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.homework-section-title {
+    color: #34495e;
+    font-size: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.homework-text {
+    font-size: 16px;
+    color: #555;
+}
+
+.homework-list {
+    margin-left: 20px;
+    padding-left: 15px;
+}
+
+.homework-list li {
+    margin-bottom: 8px;
+}
+
+.homework-link {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.homework-link:hover {
+    text-decoration: underline;
+}

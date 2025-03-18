@@ -1,0 +1,59 @@
+<div class="homework-container">
+    <h1 class="homework-title">GLOBAL BLUE - HOMEWORK</h1>
+
+    <h2 class="homework-section-title">User Story</h2>
+    <p class="homework-text">
+        As a web portal user, I would like to calculate Net, Gross, and VAT amounts for purchases in Austria 
+        so that I can use correctly calculated data.
+    </p>
+
+    <h2 class="homework-section-title">Acceptance Criteria</h2>
+    <ul class="homework-list">
+        <li>
+            If the user inputs one of the net, gross, or VAT amounts and additionally a valid Austrian VAT rate (10%, 13%, 20%), 
+            the other two missing amounts (net/gross/VAT) are calculated by the system and shown.
+        </li>
+        <li>
+            The system provides an error with meaningful error messages in case of:
+            <ul>
+                <li>Missing or invalid (0 or non-numeric) amount input, or more than one input.</li>
+                <li>Missing or invalid (0 or non-numeric) VAT input.</li>
+            </ul>
+        </li>
+        <li>
+            The web interface must be responsive and needs to work on all standard desktop resolutions – 
+            supported browsers are Mozilla, Chrome, Edge (no mobile or tablet support).
+        </li>
+    </ul>
+
+    <h2 class="homework-section-title">Technical Requirements</h2>
+    <ul class="homework-list">
+        <li>The solution needs to be implemented in the Angular 18 framework.</li>
+        <li>
+            The solution needs to use the Angular Material CSS framework/UI components 
+            (<a href="https://material.angular.io" target="_blank" class="homework-link">Angular Material</a>).
+        </li>
+        <li>
+            The backend implementation shall be done with the .NET 8.0 framework and utilize the 
+            dependency injection (DI) design pattern and SOLID principles.
+        </li>
+        <li>The API needs to fulfill the REST API standards.</li>
+        <li>
+            The solution needs to be published in a public GitHub repository accessible by the GB team.
+        </li>
+    </ul>
+
+    <h2 class="homework-section-title">Useful Links</h2>
+    <ul class="homework-list">
+        <li>
+            <a href="https://www.calkoo.com/en/vat-calculator" target="_blank" class="homework-link">
+                Test the VAT calculation logic
+            </a>
+        </li>
+        <li>
+            <a href="https://material.angular.io/" target="_blank" class="homework-link">
+                Angular Material
+            </a>
+        </li>
+    </ul>
+</div>
