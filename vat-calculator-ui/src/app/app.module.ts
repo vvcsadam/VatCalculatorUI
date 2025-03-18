@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AppConfig } from './config/app.config';
 
 import { TaskDescriptionComponent } from './task-description/task-description.component';
 import { VatCalculatorComponent } from './vat-calculator/vat-calculator.component';
@@ -18,6 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
+import { GlobalErrorHandler } from './services/global-error.handler';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    AppConfig, 
+    { provide: ErrorHandler, useClass: GlobalErrorHandler }
   ],
   bootstrap: [AppComponent]
 })
