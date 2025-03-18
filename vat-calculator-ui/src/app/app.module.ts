@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AppConfig } from './config/app.config';
@@ -40,6 +41,7 @@ import { GlobalErrorHandler } from './services/global-error.handler';
     MatSelectModule,
     MatOptionModule,
     MatIconModule
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration(),
